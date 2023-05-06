@@ -81,7 +81,7 @@ switch (new Date().getDay()) {
 // time picker - set default time 
 const formattedTime = (todayHour + 1) + ":" + ("00");
 if (document.getElementById("date").value === today) {
-  if (todayHour > 12) {
+  if (todayHour > 11) {
     document.getElementById("time").defaultValue = formattedTime;
   } else {
     document.getElementById("time").defaultValue = "12:00";
@@ -94,7 +94,7 @@ if (document.getElementById("date").value === tmr) {
 // time picker - prevent choosing the invalid hours
 // before opening time / during operating time
 if (document.getElementById("date").value === today) {
-  if (todayHour > 12) {
+  if (todayHour > 11) {
     document.getElementById("time").min = formattedTime;
   } else {
     document.getElementById("time").min = "12:00";
