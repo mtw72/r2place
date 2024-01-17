@@ -1,0 +1,363 @@
+body {
+    margin: 0px;
+    background-color: rgb(255, 251, 245, 0.5);
+    position: relative;
+    font-family: 'Rancho', cursive;
+    font-size: 1.3rem;
+}
+
+/* Loader */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid rgb(248, 203, 166);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-container p {
+    margin: 15px 0 0 25px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.hidden {
+    display: none;
+}
+
+/* general */
+.center {
+    text-align: center;
+}
+
+/*sub-heading*/
+h1.center {
+    text-shadow: 2px 3px pink;
+}
+
+hr {
+    border: 1px solid rgb(229, 186, 115);
+}
+
+/* Dancing script */
+.bottomleft
+/*home*/
+,
+.logofont
+
+/*findus*/
+    {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}
+
+/* navbar */
+.navbar {
+    background-color: rgb(255, 251, 235, 0.95);
+    font-size: 1.5rem;
+}
+
+/* home */
+div.container-fluid.fullscreen {
+    padding: 0;
+    position: relative;
+    border-bottom: 1px solid rgb(229, 186, 115);
+}
+
+#home img {
+    max-width: 100%;
+    max-height: 90%;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    color: aliceblue;
+}
+
+.bottomleft h1 {
+    font-size: 2.7vw;
+}
+
+.bottomleft h5 {
+    font-size: 1.8vw;
+}
+
+/* menu header */
+.tablink {
+    border: 1px solid rgb(255, 231, 204);
+    background-color: rgb(255, 251, 235, 0.7);
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    transition: 0.5s;
+}
+
+.tablink-active {
+    border: 1px solid rgb(255, 231, 204);
+    background-color: rgb(248, 203, 166);
+    color: rgb(255, 251, 235);
+    text-align: center;
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.tablink a {
+    text-decoration: none;
+    color: black;
+}
+
+.tablink:hover,
+#menu .badge {
+    background-color: rgb(248, 203, 166);
+}
+
+.tablink:hover a {
+    color: rgb(255, 251, 235);
+}
+
+/* menu content */
+.menu {
+    display: none;
+    margin: 0 5% 0;
+    border: 1px solid rgb(255, 231, 204);
+    border-top: 0px;
+    text-align: left;
+    line-height: 2.8;
+    background-color: white;
+}
+
+/* menu description */
+.col-lg-8 h3 {
+    padding: 2% 0 0 3%;
+}
+
+.col-lg-8 h3:first-child {
+    padding-top: 4%;
+}
+
+.col-lg-8 p {
+    padding: 0% 0 2% 3%;
+}
+
+.menu-desc {
+    padding-right: 0;
+    border-right: 1px solid rgb(229, 186, 115);
+}
+
+.menu-desc b {
+    margin-right: 10px;
+}
+
+.menu-desc p,
+.img-title {
+    font-size: 1.5rem;
+}
+
+.menu-desc p:not(:last-child) {
+    border-bottom: 1px solid rgb(229, 186, 115);
+}
+
+/* menu photos */
+.img-container {
+    padding-left: 0;
+    padding-top: 2%;
+}
+
+.menu-img {
+    max-width: 90%;
+}
+
+.img-title {
+    text-shadow: 1px 1px papayawhip;
+}
+
+/* reservation form */
+.row div.col-lg-6 {
+    padding: 0px;
+}
+
+#reservation img {
+    max-width: 90%;
+    max-height: 500px;
+}
+
+form>div.row {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.form-control:focus {
+    border: 1px solid lightpink;
+    outline: 4px solid lightpink;
+}
+
+div.row .g-2 p {
+    padding-left: 2%;
+}
+
+/* find us */
+table.ms-2 td {
+    font-size: 1.35rem;
+}
+
+.tel {
+    text-decoration: none;
+}
+
+.tel,
+.email {
+    color: lightsalmon;
+}
+
+.tel:hover,
+.email:hover {
+    color: lightpink;
+}
+
+#findus hr {
+    border: 4px dotted grey;
+    border-bottom: none;
+    width: 90%
+}
+
+/* footer */
+.social-icon {
+    margin: 20px 10px;
+}
+
+/* media queries */
+@media all and (min-width:992px) {
+    .tablink {
+        border-radius: 50px 50px 0 0;
+    }
+
+    .menu {
+        border-radius: 0 0 15px 15px;
+    }
+}
+
+@media all and (max-width:767.5px) {
+
+    /* home */
+    .bottomleft h1 {
+        font-size: 3.5vw;
+    }
+
+    .bottomleft h5 {
+        font-size: 2.5vw;
+    }
+
+    /* menu */
+    .menu-desc {
+        padding-right: 12px;
+        border-right: 0;
+    }
+
+    /* menu photos */
+    .img-container {
+        padding-left: 12px;
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:576px) {
+    .img-container {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width:576px) {
+
+    /* general */
+    body {
+        font-size: 1.25rem;
+    }
+
+    /* loader */
+    .loader-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loader {
+        border: 10px solid #f3f3f3;
+        border-top: 10px solid rgb(248, 203, 166);
+        width: 80px;
+        height: 80px;
+    }
+
+    .loader-container p {
+        margin: 20px 0 0 0;
+    }
+
+    /* navbar */
+    nav.navbar a.logofont {
+        font-size: 1.6rem;
+    }
+
+    .navbar {
+        font-size: 1.35rem;
+    }
+
+    /* home */
+    div.container-fluid.fullscreen {
+        padding: 70px 0 0 0;
+    }
+
+    .bottomleft {
+        bottom: 2%;
+        left: 2%;
+    }
+
+    .bottomleft h1 {
+        font-size: 5vw;
+    }
+
+    .bottomleft h5 {
+        display: none;
+    }
+
+    /* menu */
+    div#menu a.stretched-link {
+        font-size: 1.35rem;
+    }
+
+    div#menu h1.center,
+    div#reservation h1.center {
+        font-size: 2rem;
+    }
+
+    .menu div.col-lg-8 {
+        line-height: 2;
+    }
+
+    .menu-desc p,
+    .img-title {
+        font-size: 1.3rem;
+    }
+
+    /* find us */
+    table.ms-2 td {
+        font-size: 1.3rem;
+    }
+}

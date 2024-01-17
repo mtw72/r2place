@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+  content="Welcome to R2 Place. A place to Relax and Recharge.">
+  <title>R2 Place</title>
+  <link rel="icon" type="image/x-icon" href="images/R2.png">
+
+  <!-- Bootstrap 5 Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google font for logo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Google font for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+
+  <!-- CSS for R2 Place -->
+  <link rel="stylesheet" href="r2place.css">
+
+  <!-- Bootstrap 5 Latest compiled JavaScript -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- script for loader -->
+  <script defer src="scripts/loader.js"></script>
+
+  <!-- script for navbar on small screens -->
+  <script defer src="scripts/navbar.js"></script>
+
+  <!-- script for toggling of menu -->
+  <script defer src="scripts/menu.js"></script>
+
+  <!-- script for reservation form -->
+  <script defer src="scripts/reservation-form.js"></script>
+
+  <!-- Font Awesome -->
+  <script defer src="https://kit.fontawesome.com/b406833c6d.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+  <!-- Loader -->
+  <div class="loader-container">
+    <div class="loader"></div>
+    <p>Welcome to R2&nbsp;Place</p>
+  </div>
+  <div class="content hidden">
+    <!-- website content -->
+
+    <!-- A horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand logofont ms-sm-3" href="#home">R2 Place</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item me-md-3">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item me-md-3">
+              <a class="nav-link" href="#reservation">Reservation</a>
+            </li>
+            <li class="nav-item me-md-3">
+              <a class="nav-link" href="#findus">Find Us</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <div class="container-fluid fullscreen" id="home">
+      <img src="images/home-bg.jpeg" alt="R2 Place">
+      <div class="bottomleft">
+        <h1>R2 Place</h1>
+        <h5>A place to Relax and Recharge</h5>
+      </div>
+    </div>
+
+    <!-- Menu Container -->
+    <div class="container-fluid mb-4" id="menu">
+      <div class="mx-auto">
+        <h1 class="mt-5 mb-sm-5 mb-4 center">MENU</h1>
+
+        <div class="row" style="margin:0 5% 0;">
+          <div class="col-4 tablink position-relative">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');" id="myLink"
+              class="stretched-link">PASTA</a>
+          </div>
+          <div class="col-4 tablink position-relative">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Rice');" class="stretched-link">RICE</a>
+          </div>
+          <div class="col-4 tablink position-relative">
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Sides');" class="stretched-link">SIDES</a>
+          </div>
+        </div>
+
+        <div id="Pasta" class="menu">
+          <div class="row">
+            <div class="col-lg-8 col-md-6 menu-desc">
+              <h3><b>Salmon Spaghetti</b> <span class="badge">£11.50</span></h3>
+              <p>- Salmon Spaghetti with Mushroom Sauce</p>
+              <h3><b>Baked Seafood Fettuccine</b> <span class="badge">£13.50</span></h3>
+              <p>- Baked Prawn, Seafood Stick and Squid with Fettuccine with White Sauce</p>
+              <h3><b>Prawn and Crab Macaroni</b> <span class="badge">£12.50</span></h3>
+              <p>- Prawn and Crab Meat with Macaroni with Mushroom Sauce and Black Pepper</p>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center img-container">
+              <img src="images/salmon-spaghetti.jpeg" alt="Salmon Spaghetti" class="menu-img" loading="lazy">
+              <p class="img-title">Salmon Spaghetti</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="Rice" class="menu">
+          <div class="row">
+            <div class="col-lg-8 col-md-6 menu-desc">
+              <h3><b>Salmon and Prawn Risotto</b> <span class="badge">£14.50</span></h3>
+              <p>- Salmon and Prawn Risotto in Mushroom Sauce</p>
+              <h3><b>Thai Pineapple Fried Rice</b> <span class="badge">£16.50</span></h3>
+              <p>- Thai-style Fried Rice with Seafood and Pineapple</p>
+              <h3><b>Mackerel with Black Rice</b> <span class="badge">£12.50</span></h3>
+              <p>- Grilled Mackerel with Tofu and Black Rice</p>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center img-container">
+              <img src="images/thai-pineapple-fried-rice.jpeg" alt="Thai Pineapple Fried Rice" class="menu-img" loading="lazy">
+              <p class="img-title">Thai Pineapple Fried Rice</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="Sides" class="menu">
+          <div class="row">
+            <div class="col-lg-8 col-md-6 menu-desc">
+              <h3><b>Satay Chicken Skewers</b> <span class="badge">£8.00</span></h3>
+              <p>- Grilled Chicken Skewers with Satay Sauce</p>
+              <h3><b>Salmon Avocado Rice Paper Rolls</b> <span class="badge">£9.50</span></h3>
+              <p>- Salmon, Egg and Avocado in Rice Paper Rolls</p>
+              <h3><b>Petits Pains Curry Prawn</b> <span class="badge">£8.50</span></h3>
+              <p>- Curry Prawn in Petits Pains</p>
+            </div>
+            <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center img-container">
+              <img src="images/satay-chicken-skewers.jpeg" alt="Satay Chicken Skewers" class="menu-img" loading="lazy">
+              <p class="img-title">Satay Chicken Skewers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- Reservation -->
+    <div class="container-fluid" id="reservation">
+      <h1 class="mt-5 mb-sm-5 center">RESERVATION</h1>
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="images/r2place-entrance.jpeg" alt="R2 Place Entrance" title="R2 Place Entrance"
+            class="mx-auto d-block mt-2 mb-2 img-thumbnail" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+          <form action="" onsubmit="formSubmitted()" method="post" enctype="text/plain">
+            <div class="row g-2">
+              <div class="col-md">
+                <div class="form-floating mb-md-3 mt-md-5">
+                  <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required>
+                  <label for="name">Name</label>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-floating mb-md-3 mt-md-5">
+                  <input type="tel" class="form-control" id="tel" placeholder="Telephone" name="tel" required>
+                  <label for="email">Telephone</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-2">
+              <div class="col-md">
+                <div class="form-floating mb-md-3 mt-md-3">
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-floating mb-md-3 mt-md-3">
+                  <input type="number" class="form-control" id="ppl" placeholder="Number of Guest(s)" name="ppl" min="1"
+                    max="12" required>
+                  <label for="ppl">Number of Guest(s)</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-2">
+              <div class="col-md">
+                <div class="form-floating mb-md-3 mt-md-3">
+                  <input type="date" class="form-control" id="date" placeholder="Date" name="date" required>
+                  <label for="date">Date</label>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-floating mb-md-3 mt-md-3">
+                  <input type="time" class="form-control" id="time" placeholder="Time*" name="time"
+                    onfocus="this.value=''" required>
+                  <label for="time">Time*</label>
+                </div>
+              </div>
+              <p>*Reservations must be made at least an hour before the scheduled booking time and before the restaurant's closing time.</p>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-lg btn-dark float-end me-4">Submit</button> <br><br>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <hr>
+
+    <!-- Find us -->
+    <div class="container-fluid" id="findus">
+      <div class="row ms-3 me-3">
+        <div class="col-lg-4 col-md-12 p-2">
+          <h1 class="logofont d-none d-sm-block">R2 Place</h1>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6 p-2 mb-3">
+          <h3>Find Us</h3>
+          <hr>
+          <table class="ms-2">
+            <tr>
+              <td>Address:</td>
+              <td>R2&nbsp;Place,<wbr> 2&nbsp;Relax&nbsp;Street,<wbr> R2&nbsp;1ST</td>
+            </tr>
+            <tr>
+              <td>Telephone:&nbsp;&nbsp;&nbsp;</td>
+              <td><a href="tel:+441234567890" class="tel">0123 456 7890</a></td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td><a href="mailto:info@r2p.com" class="email">info@r2p.com</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6 p-2">
+          <h3>Opening Hours</h3>
+          <hr>
+          <table class="ms-2">
+            <tr>
+              <td>Sunday:</td>
+              <td>12:00 - 17:00</td>
+            </tr>
+            <tr>
+              <td>Monday:</td>
+              <td>12:00 - 20:00</td>
+            </tr>
+            <tr>
+              <td>Tuesday:</td>
+              <td>12:00 - 20:00</td>
+            </tr>
+            <tr>
+              <td>Wednesday:&nbsp;&nbsp;&nbsp;</td>
+              <td>12:00 - 20:00</td>
+            </tr>
+            <tr>
+              <td>Thursday:</td>
+              <td>12:00 - 20:00</td>
+            </tr>
+            <tr>
+              <td>Friday:</td>
+              <td>12:00 - 21:00</td>
+            </tr>
+            <tr>
+              <td>Saturday:</td>
+              <td>12:00 - 21:00</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid center pb-2">
+        <i class="social-icon fab fa-facebook-f"></i>
+        <i class="social-icon fab fa-twitter"></i>
+        <i class="social-icon fab fa-instagram"></i>
+        <i class="social-icon fas fa-envelope"></i>
+        <p>© Copyright 2023 R2 Place</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
